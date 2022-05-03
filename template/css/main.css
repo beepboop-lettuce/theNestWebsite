@@ -136,7 +136,7 @@ p {
 .btn {
   color: #ffffff;
   border: 1px solid transparent;
-  background-color: #037FD5;
+  background-color: #685367;
   font-size: 1rem; }
   @media (min-width: 768px) {
     .btn {
@@ -149,7 +149,7 @@ p {
     background-color: #025691; }
   .btn:hover, .btn:focus {
     color: #ffffff;
-    background-color: #025691;
+    background-color: #5a4444;
     border-color: #025691; }
   .btn.disabled, .btn:disabled {
     color: #ffffff;
