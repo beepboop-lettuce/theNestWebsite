@@ -1150,7 +1150,7 @@ textarea {
     width: 50%;
     padding-right: 8px; }
   .grid-lg-3 .item {
-    width: 33.33333%;
+    width: 16.666667%;
     padding-right: 8px; }
   .grid-lg-4 .item {
     width: 25%;
@@ -4287,8 +4287,8 @@ textarea {
         .slide-wrapper .legend h3 {
           font-size: 3.5rem; } }
       @media (min-width: 960px) and (orientation: landscape) {
-        .slide-wrapper .legend h3 {
-          margin-left: -96px; } }
+        /* .slide-wrapper .legend h3 {
+          margin-left: -96px; } */ } 
     .slide-wrapper .legend h4 {
       font-size: 1.25rem; }
     .slide-wrapper .legend .icons {
