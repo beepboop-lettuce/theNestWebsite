@@ -6,19 +6,22 @@
 
 // Init all plugin when document is ready 
 $(document).on('ready', function () {
-	// 0. Init console to avoid error
-	var method;
-	var noop = function () { };
-	var methods = [
+	let src;
+	let i;
+// 0. Init console to avoid error
+	let method;
+	const noop = function () {
+	};
+	const methods = [
 		'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
 		'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
 		'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
 		'timeStamp', 'trace', 'warn'
 	];
-	var length = methods.length;
-	var console = (window.console = window.console || {});
-	var contextWindow = $(window);
-	var $root = $('html, body');
+	let length = methods.length;
+	const console = (window.console = window.console || {});
+	const contextWindow = $(window);
+	const $root = $('html, body');
 	while (length--) {
 		method = methods[length];
 		// Only stub undefined methods.
@@ -28,19 +31,19 @@ $(document).on('ready', function () {
 	}
 
 	// 1. Background image as data attribut 
-	var list = $('.bg-img');
-	for (var i = 0; i < list.length; i++) {
-		var src = list[i].getAttribute('data-image-src');
+	const list = $('.bg-img');
+	for (let i = 0; i < list.length; i++) {
+		let src = list[i].getAttribute('data-image-src');
 		list[i].style.backgroundImage = "url('" + src + "')";
 		list[i].style.backgroundRepeat = "no-repeat";
 		list[i].style.backgroundPosition = "center";
 		list[i].style.backgroundSize = "cover";
 	}
 	// Image block to Background image 
-	var listImgBlock = $('.img-block');
-	for (var i = 0; i < listImgBlock.length; i++) {
-		var src = listImgBlock[i].getAttribute('src');
-		var divBlock = document.createElement("div");
+	const listImgBlock = $('.img-block');
+	for (let i = 0; i < listImgBlock.length; i++) {
+		let src = listImgBlock[i].getAttribute('src');
+		const divBlock = document.createElement("div");
 		divBlock.setAttribute("class", "img");
 		divBlock.style.backgroundImage = "url('" + src + "')";
 		divBlock.style.backgroundRepeat = "no-repeat";
@@ -50,10 +53,9 @@ $(document).on('ready', function () {
 		listImgBlock[i].style.display = "none";
 	}
 	// Background color as data attribut
-	var listColor = $('.bg-color');
-	for (var i = 0; i < listColor.length; i++) {
-		var src = listColor[i].getAttribute('data-bgcolor');
-		listColor[i].style.backgroundColor = src;
+	const listColor = $('.bg-color');
+	for (i = 0; i < listColor.length; i++) {
+		listColor[i].style.backgroundColor = listColor[i].getAttribute('data-bgcolor');
 	}
 
 	// 2. Init Coutdown clock
@@ -70,11 +72,11 @@ $(document).on('ready', function () {
 	}
 
 	// 3. Show/hide menu when icon is clicked
-	var menuItems = $('.all-menu-wrapper .nav-link');
-	var menuIcon = $('.menu-icon, #navMenuIcon');
-	var menuBlock = $('.all-menu-wrapper');
-	var reactToMenu = $ ('.page-main, .navbar-sidebar, .page-cover')
-	var menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a");
+	const menuItems = $('.all-menu-wrapper .nav-link');
+	const menuIcon = $('.menu-icon, #navMenuIcon');
+	const menuBlock = $('.all-menu-wrapper');
+	const reactToMenu = $('.page-main, .navbar-sidebar, .page-cover');
+	const menuLinks = $(".navbar-mainmenu a, .navbar-sidebar a");
 	// Menu icon clicked
 	menuIcon.on('click', function () {
 		menuIcon.toggleClass('menu-visible');
@@ -154,10 +156,10 @@ $(document).on('ready', function () {
 	});
 	
 	// 4.1 Slideshow slider
-	var imageList = $('.slide-show .img');
-	var imageSlides = [];
-	for (var i = 0; i < imageList.length; i++) {
-		var src = imageList[i].getAttribute('data-src');
+	const imageList = $('.slide-show .img');
+	const imageSlides = [];
+	for (i = 0; i < imageList.length; i++) {
+		src = imageList[i].getAttribute('data-src');
 		imageSlides.push({ src: src });
 	}
 	$('.slide-show').vegas({
@@ -168,33 +170,33 @@ $(document).on('ready', function () {
 	});
 	
 	// 5. Init video background
-	var videoBg = $('.video-container video, .video-container object');
+	const videoBg = $('.video-container video, .video-container object');
 
 	// 6. Prepare content for animation
 	$('.section .content .anim.anim-wrapped').wrap("<span class='anim-wrapper'></span>");
 
 	// 7. Init fullPage.js plugin
-	var pageSectionDivs = $('.page-fullpage .section');
-	var headerLogo = $('.header-top .logo');
-	var bodySelector = $('body');
-	var sectionSelector = $('.section');
-	var headerContainer = $('.hh-header');
-	var slideElem = $('.slide');
-	var arrowElem = $('.p-footer .arrow-d');
-	var siteFooter = $('.page-footer');
-	var siteHeader = $('.page-header');
-	var pageElem = $('.section');
-	var pageSections = [];
-	var pageAnchors = [];
-	var nextSectionDOM;
-	var nextSection;
-	var fpnavItem;
-	var mainPage = $('#mainpage');
-	var galleryPage = $('#gallerypage');
-	var sendEmailForm = $('.send_email_form');
-	var sendMessageForm = $('.send_message_form');
-	var scrollOverflow = true;
-	var css3 = true;
+	const pageSectionDivs = $('.page-fullpage .section');
+	const headerLogo = $('.header-top .logo');
+	const bodySelector = $('body');
+	const sectionSelector = $('.section');
+	const headerContainer = $('.hh-header');
+	const slideElem = $('.slide');
+	const arrowElem = $('.p-footer .arrow-d');
+	const siteFooter = $('.page-footer');
+	const siteHeader = $('.page-header');
+	const pageElem = $('.section');
+	const pageSections = [];
+	const pageAnchors = [];
+	let nextSectionDOM;
+	let nextSection;
+	let fpnavItem;
+	const mainPage = $('#mainpage');
+	const galleryPage = $('#gallerypage');
+	const sendEmailForm = $('.send_email_form');
+	const sendMessageForm = $('.send_message_form');
+	let scrollOverflow = true;
+	let css3 = true;
 	// disable scroll overflow on small device
 	if (contextWindow.width() < 601) {
 		scrollOverflow = false;
@@ -205,11 +207,11 @@ $(document).on('ready', function () {
 		css3 = false;
 	}
 	// Get sections name
-	for (var i = 0; i < pageSectionDivs.length; i++) {
+	for (i = 0; i < pageSectionDivs.length; i++) {
 		pageSections.push(pageSectionDivs[i]);
 	}
 	window.asyncEach(pageSections, function (pageSection, cb) {
-		var anchor = pageSection.getAttribute('data-section');
+		const anchor = pageSection.getAttribute('data-section');
 		pageAnchors.push(anchor + "");
 		cb();
 	}, function (err) {
@@ -234,10 +236,10 @@ $(document).on('ready', function () {
 				normalScrollElements: '.section .scrollable',
 				afterRender: function () {
 					// init parallax 
-					var parallaxCover = document.getElementById('parallax-cover')
+					const parallaxCover = document.getElementById('parallax-cover');
 					if (parallaxCover) {
 						if (contextWindow.width() > 1024) {
-							var parallaxInstance = new Parallax(parallaxCover);
+							const parallaxInstance = new Parallax(parallaxCover);
 						}
 					}
 
@@ -271,11 +273,11 @@ $(document).on('ready', function () {
 
 					// Fix for internet explorer : adjust content height
 					// Detect IE 6-11
-					var isIE = /*@cc_on!@*/false || !!document.documentMode;
+					const isIE = /*@cc_on!@*/false || !!document.documentMode;
 					if (isIE) {
-						var contentColumns = $('.section .content .c-columns');
+						const contentColumns = $('.section .content .c-columns');
 						contentColumns.height(contextWindow.height())
-						for (var i = 0; i < contentColumns.length; i++) {
+						for (let i = 0; i < contentColumns.length; i++) {
 							if (contentColumns[i].height <= contextWindow.height()) {
 								contentColumns[i].style.height = "100vh";
 							}
@@ -284,8 +286,8 @@ $(document).on('ready', function () {
 
 					// init contact form
 					// Default server url
-					var newsletterServerUrl = './ajaxserver/serverfile.php';
-					var messageServerUrl = './ajaxserver/serverfile.php';
+					let newsletterServerUrl = './ajaxserver/serverfile.php';
+					let messageServerUrl = './ajaxserver/serverfile.php';
 
 					// Use form define action attribute
 					if (sendEmailForm.attr('action') && (sendEmailForm.attr('action')) != '') {
@@ -304,7 +306,7 @@ $(document).on('ready', function () {
 
 				},
 				afterResize: function () {
-					var pluginContainer = $(this);
+					const pluginContainer = $(this);
 					$.fn.fullpage.reBuild();
 					// uncomment below to force reload windows on screen resize
 					if (contextWindow.width() > 1024) {
@@ -320,7 +322,7 @@ $(document).on('ready', function () {
 				},
 				afterLoad: function (anchorLink, index) {
 					// Behavior after a full page is loaded
-					var pageCover = $('.page-cover');
+					const pageCover = $('.page-cover');
 					if (index > 1 ){
 						if (!pageCover.hasClass('scrolled')) {
 							pageCover.addClass('scrolled');
@@ -336,7 +338,7 @@ $(document).on('ready', function () {
 						siteHeader.removeClass('fp-scrolled');
 						siteFooter.removeClass('fp-scrolled');
 					}
-					var activeSection = $('.section.active');
+					const activeSection = $('.section.active');
 					if (!activeSection.hasClass('section-anim')) {
 						// uncomment below for onetime animation
 						activeSection.addClass('section-anim');
@@ -373,7 +375,7 @@ $(document).on('ready', function () {
 				afterRender: function () {
 				},
 				afterResize: function () {
-					var pluginContainer = $(this);
+					const pluginContainer = $(this);
 					$.fn.fullpage.reBuild();
 				},
 				afterLoad: function () {
@@ -420,10 +422,10 @@ $(document).on('ready', function () {
 	});
 
 	// 8. Hide some ui on scroll
-	var scrollHeight = $(document).height() - contextWindow.height();
+	const scrollHeight = $(document).height() - contextWindow.height();
 	contextWindow.on('scroll', function () {
-		var scrollpos = $(this).scrollTop();
-		var siteHeaderFooter = $('.page-footer, .page-header');
+		const scrollpos = $(this).scrollTop();
+		const siteHeaderFooter = $('.page-footer, .page-header');
 
 		// if (scrollpos > 10 && scrollpos < scrollHeight - 100) {
 		if (scrollpos > 100) {
@@ -442,7 +444,7 @@ $(document).on('ready', function () {
 	});
 
 	// 10. cursor position
-	var shadowBall = $(".cursor-ball");
+	const shadowBall = $(".cursor-ball");
 	$(".body-page").mousemove(function(e) {
 		shadowBall.css("transform", "translateX(" + e.pageX + "px)");
 		// shadowBall.css("transform", "translate(" + e.pageX + "px," + e.pageY +"px)");
