@@ -54,20 +54,20 @@ func listen(mux *http.ServeMux) {
 
 	if os.Getenv("ENV") != "development" {
 
-		cert := os.Getenv("NEST_CERT")
-		if cert == "" {
-			log.Println("$NEST_CERT not set")
-			os.Exit(1)
-		}
-
-		key := os.Getenv("NEST_KEY")
-		if key == "" {
-			log.Println("$NEST_KEY not set")
-			os.Exit(1)
-		}
+		//cert := os.Getenv("NEST_CERT")
+		//if cert == "" {
+		//	log.Println("$NEST_CERT not set")
+		//	os.Exit(1)
+		//}
+		//
+		//key := os.Getenv("NEST_KEY")
+		//if key == "" {
+		//	log.Println("$NEST_KEY not set")
+		//	os.Exit(1)
+		//}
 		// Start server on $PORT
 		log.Println("using TLS")
-		log.Fatal(http.ListenAndServeTLS(":"+port, cert, key, mux))
+		log.Fatal(http.ListenAndServeTLS(":"+port, "./server.crt", "./server.key", mux))
 	} else {
 		log.Fatal(http.ListenAndServe(":"+port, mux))
 	}

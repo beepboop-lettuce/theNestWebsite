@@ -1,1 +1,2 @@
 system.d article: https://www.atpeaz.com/running-go-app-as-a-service-on-ubuntu/
+config ssl certs: https://help.zerossl.com/hc/en-us/articles/360060120373-Installing-SSL-Certificate-on-Ubuntu:
