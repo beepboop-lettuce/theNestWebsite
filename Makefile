@@ -1,3 +1,3 @@
 .PHONY: dev
 dev:
-	gin run -i -all go main.go
+	gin run -i -all go nest-server.go
