@@ -67,7 +67,7 @@ func listen(mux *http.ServeMux) {
 		//}
 		// Start server on $PORT
 		log.Println("using TLS")
-		log.Fatal(http.ListenAndServeTLS(":"+port, "./server.crt", "./server.key", mux))
+		log.Fatal(http.ListenAndServeTLS(":8443", "./server.crt", "./server.key", mux))
 	} else {
 		log.Fatal(http.ListenAndServe(":"+port, mux))
 	}
