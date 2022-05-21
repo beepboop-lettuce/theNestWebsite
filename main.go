@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -13,11 +14,12 @@ func main() {
 	mux.HandleFunc("/", indexHandler)
 	mux.HandleFunc("/contact", contact)
 
-	port := ":8080"
-	fmt.Println("Server is running on port" + port)
+	port := os.Getenv("PORT")
+	fmt.Println("Server is running on port: " + port)
 
 	// Start server on port specified above
-	log.Fatal(http.ListenAndServe(port, mux))
+
+	log.Fatal(http.ListenAndServe(":"+port, mux))
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
