@@ -1,0 +1,11 @@
+[Unit]
+Description=The nest website server
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+Environment="PORT=8080"
+WorkingDirectory=/home/frank/dev/src/github.com/theNestWebsite
+ExecStart=/home/frank/dev/src/github.com/theNestWebsite/bin/theNestWebsite
+[Install]
+WantedBy=multi-user.target

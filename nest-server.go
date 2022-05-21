@@ -5,21 +5,19 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/signal"
+	"syscall"
 )
 
-func main() {
-	mux := http.NewServeMux()
-	staticHandler := http.FileServer(http.Dir("./assets"))
-	mux.Handle("/assets/", http.StripPrefix("/assets", staticHandler))
-	mux.HandleFunc("/", indexHandler)
-	mux.HandleFunc("/contact", contact)
-
-	port := os.Getenv("PORT")
-	fmt.Println("Server is running on port: " + port)
-
-	// Start server on port specified above
-
-	log.Fatal(http.ListenAndServe(":"+port, mux))
+func reloadable() {
+	s := make(chan os.Signal, 1)
+	signal.Notify(s, syscall.SIGHUP)
+	go func() {
+		for {
+			<-s
+			log.Println("Reloaded")
+		}
+	}()
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
@@ -32,4 +30,35 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 func contact(writer http.ResponseWriter, request *http.Request) {
 	fmt.Println(request.Form)
+}
+
+func register() *http.ServeMux {
+	mux := http.NewServeMux()
+	staticHandler := http.FileServer(http.Dir("./assets"))
+	mux.Handle("/assets/", http.StripPrefix("/assets", staticHandler))
+	mux.HandleFunc("/", indexHandler)
+	mux.HandleFunc("/contact", contact)
+
+	return mux
+}
+
+func listen(mux *http.ServeMux) {
+
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Println("$PORT not set")
+		os.Exit(1)
+	}
+
+	log.Println("Server is running on port: " + port)
+
+	// Start server on $PORT
+	log.Fatal(http.ListenAndServe(":"+port, mux))
+}
+
+func main() {
+	mux := register()
+	reloadable()
+	listen(mux)
 }
