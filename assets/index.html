@@ -45,9 +45,9 @@
   <link rel="stylesheet" href="/assets/css/pageloader.css">
 
   <!-- Uncomment below to load individualy vendor CSS -->
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
   <link rel="stylesheet" href="/assets/js/vendor/swiper.min.css">
-  <link rel="stylesheet" href="/assets/js/vendor/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="/assets/js/vendor/jquery.fullpage.css">
   <link rel="stylesheet" href="/assets/js/vegas/vegas.min.css">
 
   <!-- Main CSS files -->
@@ -870,6 +870,10 @@
   <!-- scripts -->
   <!-- All Javascript plugins goes here -->
   <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <!-- bootstrap depends on popper -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <!-- bootstrap needs to be loaded after jquery -->
+  <script src="/assets/js/bootstrap.min.js"></script>
   <script src="/assets/js/slick/slick.min.js"></script>
 
   <!-- All vendor scripts -->
@@ -879,7 +883,7 @@
   <script src="/assets/js/particlejs/particles.min.js"></script>
 
   <!-- Countdown script -->
-  <script src="/assets/js/jquery.downCount.js"></script>
+<!--  <script src="/assets/js/jquery.downCount.js"></script>-->
 
   <!-- Form script -->
   <script src="/assets/js/form_script.js"></script>
