@@ -6,21 +6,8 @@ import (
 	"net/http"
 	"net/smtp"
 	"os"
-	"os/signal"
 	"strings"
-	"syscall"
 )
-
-func reloadable() {
-	s := make(chan os.Signal, 1)
-	signal.Notify(s, syscall.SIGHUP)
-	go func() {
-		for {
-			<-s
-			log.Println("Reloaded")
-		}
-	}()
-}
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Scheme != "https" {
@@ -33,7 +20,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "./assets/index.html")
 }
 
-func contact(writer http.ResponseWriter, request *http.Request) {
+func contact(_ http.ResponseWriter, request *http.Request) {
 	err := request.ParseForm()
 	if err != nil {
 		log.Println(err)
@@ -88,20 +75,16 @@ func register() *http.ServeMux {
 }
 
 func listen(mux *http.ServeMux) {
-	port := os.Getenv("PORT")
 
-	if port == "" {
-		log.Println("$PORT not set")
-		os.Exit(1)
-	}
 	go func() {
+		log.Println("listening on :8443")
 		err := http.ListenAndServeTLS(":8443", "server.crt", "server.key", mux)
 		if err != nil {
 			log.Println(err)
 		}
 	}()
-	log.Println("listening on : " + port)
-	log.Fatal(http.ListenAndServe(":"+port, http.HandlerFunc(redirectToTLS)))
+	log.Println("listening on : 8080")
+	log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(redirectToTLS)))
 }
 func redirectToTLS(w http.ResponseWriter, r *http.Request) {
 	host := r.Host
@@ -113,6 +96,5 @@ func redirectToTLS(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	mux := register()
-	reloadable()
 	listen(mux)
 }
