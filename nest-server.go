@@ -78,7 +78,7 @@ func listen(mux *http.ServeMux) {
 
 	go func() {
 		log.Println("listening on :8443")
-		err := http.ListenAndServeTLS(":8443", "server.crt", "server.key", mux)
+		err := http.ListenAndServeTLS(":8443", "./server.crt", "./server.key", mux)
 		if err != nil {
 			log.Println(err)
 		}
