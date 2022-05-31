@@ -1,5 +1,5 @@
 a {
-  color: #037FD5; }
+  color: #a0522d; }
   a:hover {
     color: rgba(3, 127, 213, 0.8); }
 
@@ -9,7 +9,7 @@ a {
 
 /* subscription form */
 .form-container-transparent.form-container-white .form-desc h4 {
-  color: #ffffff; }
+  color: darkolivegreen; }
 
 .form-container-transparent.form-container-white .form-input label {
   color: #ffffff; }

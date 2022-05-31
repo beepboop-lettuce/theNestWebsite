@@ -31,8 +31,14 @@ http://miradontsoa.com
 **/
 /*---------- 
 [Colors]
+
+    Color Palette
+    Sienna: #a0522d
+    DarkOliveGreen: #556b2f
+    Palette Purple:  #6b2f55
+
     text color : #FFFFFF, #FFF
-	primary : #D1335B
+	primary : a href="tel:5125376257"1512-537-6257335B
 	secondary : #3f4b62
 	black : #1d1d1d
 	white : #ffffff
@@ -92,7 +98,7 @@ ul, li {
   margin: 0; }
 
 a {
-  color: #037FD5;
+  color: #4687a0;
   cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1912,7 +1918,7 @@ textarea {
     .carousel-swiper-alpha .slider-container .legend {
       display: block;
       margin-top: 1.5rem;
-      color: #ffffff; }
+      color: sienna }
       .carousel-swiper-alpha .slider-container .legend h3,
       .carousel-swiper-alpha .slider-container .legend h4 {
         font-size: 1rem; }
@@ -3135,7 +3141,7 @@ textarea {
 
 .body-page {
   background-color: #1d1d1d;
-  color: #ffffff; }
+  color: darkolivegreen; }
 
 .body-item {
   background-color: #1d1d1d;
@@ -3439,7 +3445,7 @@ textarea {
       .section p, .section ul {
         line-height: 1.75; } }
   .section p {
-    color: #ffffff; }
+    color:#6b2f55; }
   .section .padding-top {
     padding-top: 32px; }
     @media (min-width: 768px) {
@@ -4261,7 +4267,8 @@ textarea {
   .slide-wrapper .legend {
     padding: 16px;
     padding-top: 32px;
-    padding-bottom: 32px; }
+    padding-bottom: 32px;
+  }
     @media (min-width: 768px) {
       .slide-wrapper .legend {
         padding: 32px 64px; } }
@@ -4275,9 +4282,11 @@ textarea {
         padding: 0; } }
     @media (min-width: 1200px) and (orientation: landscape) {
       .slide-wrapper .legend {
-        width: 280px; } }
+        width: 280px;
+      }
+    }
     .slide-wrapper .legend a {
-      color: #ffffff; }
+      color: darkolivegreen; }
       .slide-wrapper .legend a:hover {
         text-decoration: none; }
     .slide-wrapper .legend h3 {
