@@ -10,9 +10,6 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	if r.URL.Scheme != "https" {
-		log.Printf("scheme: %v", r.URL.String())
-	}
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
 		return
@@ -76,22 +73,23 @@ func register() *http.ServeMux {
 
 func listen(mux *http.ServeMux) {
 
+	tlsPort := getEnv("NEST_TLS_PORT")
+	port := getEnv("NEST_PORT")
 	go func() {
-		log.Println("listening on :8443")
-		err := http.ListenAndServeTLS(":8443", "./server.crt", "./server.key", mux)
+		log.Printf("listening on :%v", tlsPort)
+		err := http.ListenAndServeTLS(":"+tlsPort, "./server.crt", "./server.key", mux)
 		if err != nil {
 			log.Println(err)
 		}
 	}()
-	log.Println("listening on : 8080")
-	log.Fatal(http.ListenAndServe(":8080", http.HandlerFunc(redirectToTLS)))
+	log.Printf("listening on :%v", port)
+	log.Fatal(http.ListenAndServe(":"+port, http.HandlerFunc(redirectToTLS)))
 }
 func redirectToTLS(w http.ResponseWriter, r *http.Request) {
 	host := r.Host
-	// need to split host from port
 	s := strings.Split(host, ":")
 	log.Printf("redirect host: %v", s[0])
-	http.Redirect(w, r, "https://"+s[0]+":8443"+r.RequestURI, http.StatusMovedPermanently)
+	http.Redirect(w, r, "https://"+s[0]+":"+getEnv("NEST_TLS_PORT")+r.RequestURI, http.StatusMovedPermanently)
 }
 
 func main() {
