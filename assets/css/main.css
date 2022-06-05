@@ -51,10 +51,10 @@ http://miradontsoa.com
   color: #1d1d1d !important; }
 
 .text-primary {
-  color: #037FD5 !important; }
+  color: #556b2f !important; }
 
 .text-secondary {
-  color: #3f4b62 !important; }
+  color: #a0522d !important; }
 
 .text-white {
   color: #ffffff !important; }
@@ -168,18 +168,18 @@ p {
 .btn-primary {
   color: #ffffff;
   border: 1px solid transparent;
-  background-color: #037FD5; }
+  background-color: #6b2f55; }
   .btn-primary.active, .btn-primary:active {
     color: #ffffff;
-    background-color: #025691; }
+    background-color: #6b2f55; }
   .btn-primary:hover, .btn-primary:focus {
     color: #ffffff;
-    background-color: #025691;
-    border-color: #025691; }
+    background-color: #6b2f55;
+    border-color: #6b2f55; }
   .btn-primary.disabled, .btn-primary:disabled {
     color: #ffffff;
     opacity: 0.7;
-    background-color: #025691; }
+    background-color: #6b2f55; }
 
 .btn-secondary {
   color: #ffffff;
@@ -333,7 +333,7 @@ p {
   transition: 0.2s; }
   .btn-circicon > .icon {
     background: #ffffff;
-    color: #037FD5;
+    color: #6b2f55;
     vertical-align: middle;
     border-radius: 100px;
     position: relative;
@@ -345,7 +345,7 @@ p {
     transition: 0.2s; }
     .btn-circicon > .icon:before {
       content: "";
-      background: #037FD5;
+      background: #6b2f55;
       position: absolute;
       top: 0;
       left: 0;
@@ -395,7 +395,7 @@ p {
   color: #ffffff; }
   .btn-circicon.btn-primary .icon {
     background: #ffffff;
-    color: #037FD5; }
+    color: #6b2f55; }
   .btn-circicon.btn-primary:hover .icon {
     background: rgba(255, 255, 255, 0.2); }
 
