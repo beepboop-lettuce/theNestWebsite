@@ -369,7 +369,8 @@ p {
     padding-right: 1rem;
     padding-left: 1rem;
     transition: 0.2s;
-    font-size: 1rem; }
+    font-size: 1.65rem;
+    font-weight: bold; }
   .btn-circicon .icon + .text {
     padding-left: 1rem; }
   .btn-circicon:focus, .btn-circicon:hover {
