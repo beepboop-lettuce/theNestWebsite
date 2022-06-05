@@ -2428,31 +2428,31 @@ textarea {
     flex-direction: row;
     padding: 0;
     transition: 0.3s ease-in-out;
-    color: currentColor; }
-    @media (min-width: 768px) {
+    color: sienna; }
+    @media (min-width: 400px) {
       .page-header-alpha .navbar-brand {
-        position: fixed;
+        position: absolute;
         left: 120px;
         top: 32px;
         z-index: 20; } }
     .page-header-alpha .navbar-brand .logo img {
       height: 40px;
       width: auto; }
-      @media (min-width: 768px) {
+      @media (min-width: 400px) {
         .page-header-alpha .navbar-brand .logo img {
-          height: 48px; } }
+          height: 100px; } }
     .page-header-alpha .navbar-brand .text {
       display: flex;
       justify-content: center;
       flex-direction: column;
       color: currentColor;
-      font-size: 1rem;
+      font-size: 2rem;
       margin-left: 8px;
       margin-right: 8px; }
       .page-header-alpha .navbar-brand .text .line {
-        display: block; }
+        display:flex; }
         .page-header-alpha .navbar-brand .text .line.sub {
-          font-size: 0.75rem;
+          font-size: 1.75rem;
           opacity: 1; }
   .page-header-alpha .all-menu-wrapper {
     justify-content: flex-end;

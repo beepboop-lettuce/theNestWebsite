@@ -327,9 +327,7 @@ $(document).on('ready', function () {
 						if (!pageCover.hasClass('scrolled')) {
 							pageCover.addClass('scrolled');
 						}
-						if (!siteHeader.hasClass('fp-scrolled')) {
-							siteHeader.addClass('fp-scrolled');
-						}
+						
 						if (!siteFooter.hasClass('fp-scrolled')) {
 							siteFooter.addClass('fp-scrolled');
 						}
