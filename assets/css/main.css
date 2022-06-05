@@ -3446,7 +3446,7 @@ textarea {
       .section p, .section ul {
         line-height: 1.75; } }
   .section p {
-    color:#6b2f55; }
+    color:#a0522d; }
   .section .padding-top {
     padding-top: 32px; }
     @media (min-width: 768px) {
@@ -4287,7 +4287,7 @@ textarea {
       }
     }
     .slide-wrapper .legend a {
-      color: darkolivegreen; }
+      color: #a0522d; }
       .slide-wrapper .legend a:hover {
         text-decoration: none; }
     .slide-wrapper .legend h3 {
