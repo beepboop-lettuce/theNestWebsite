@@ -2479,7 +2479,7 @@ textarea {
       top: 0;
       opacity: 1;
       visibility: visible; }
-    @media (max-width: 768px -1px) {
+    @media (max-width: 768px) {
       .page-header-alpha .all-menu-wrapper .navbar-nav .nav-item {
         font-size: 1.5rem;
         opacity: 1; }
@@ -4261,8 +4261,8 @@ textarea {
           height: 50vh; } }
       @media (min-width: 960px) and (orientation: landscape) {
         .slide-wrapper .illustr .img {
-          max-width: 100%;
-          max-width: 40vw;
+          width: 400px;
+          width: 40vw;
           height: 400px;
           height: 66vh; } }
   .slide-wrapper .legend {
