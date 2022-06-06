@@ -149,7 +149,7 @@ p {
       font-size: 0.875rem; } }
   @media (min-width: 960px) {
     .btn {
-      font-size: 1rem; } }
+      font-size: 1.50rem; } }
   .btn.active, .btn:active {
     color: #ffffff;
     background-color: #025691; }
@@ -2944,7 +2944,7 @@ textarea {
     width: 100%;
     height: 100%;
     /*  Page cover background image,color */
-    background: url(../img/bg-default.jpg);
+    background: url(../img/bird1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
