@@ -1,0 +1,4 @@
+make: Entering directory '/home/erica/Repositories/theNestWebsite'
+go build -o ./bin
+make: Leaving directory '/home/erica/Repositories/theNestWebsite'
+ 
