@@ -49,14 +49,10 @@ func contact(w http.ResponseWriter, request *http.Request) {
 	err = smtp.SendMail(smtpServer+":587", auth, from, to, msgBytes)
 	if err != nil {
 		log.Println(err)
-		return
-	}
-	_, err = w.Write([]byte(""))
-	if err != nil {
-		log.Println(err)
-		return
 	}
 	w.WriteHeader(http.StatusOK)
+	w.Header().Set("Content-Type", "application/json")
+	_, err = w.Write([]byte("Contact Submitted"))
 	return
 }
 

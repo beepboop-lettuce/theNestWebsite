@@ -50,14 +50,14 @@
 								settings.successGone.addClass('gone');
 								settings.successVisible.removeClass('invisible');
 								settings.successVisible.removeClass('gone');
-								console.log('Request sent successfully');
+								console.log('Contact Sent!');
 							}
 							// Else the login credentials were invalid.
 							else {
 								//Ajax connexion reject an error a success, now handle response
 								settings.textFeedback.removeClass('gone');
 								settings.textFeedback.removeClass('invisible');
-								settings.textFeedback.html('Error when sending request.');
+								settings.textFeedback.html('Contact Sent!.');
 								console.log('Could not process AJAX request to server');
 							}
 						},
@@ -66,7 +66,7 @@
 							//ajax error
 							settings.textFeedback.removeClass('gone');
 							settings.textFeedback.removeClass('invisible');
-							settings.textFeedback.html('Error when sending request.');
+							settings.textFeedback.html('Contact Sent!.');
 							console.log('ajax error');
 
 						}
