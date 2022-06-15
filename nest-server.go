@@ -17,7 +17,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "./assets/index.html")
 }
 
-func contact(_ http.ResponseWriter, request *http.Request) {
+func contact(w http.ResponseWriter, request *http.Request) {
 	err := request.ParseForm()
 	if err != nil {
 		log.Println(err)
@@ -26,13 +26,13 @@ func contact(_ http.ResponseWriter, request *http.Request) {
 	log.Println(request.Form)
 	form := request.Form
 	// send to leadership@nestatandersonmill.com
-	smtpServer := getEnv("NEST_EMAIL_SERVER")
-	user := "fccuthbertson@gmail.com"
+	smtpServer := "smtp.gmail.com"
+	user := "leadership@nestatandersonmill.com"
 	//user := getEnv("CONTACT_FORM_USER")
 	//pwd := getEnv("CONTACT_FORM_PWD")
-	pwd := "uenuirnjyvhtasuf"
-	recipient := getEnv("CONTACT_FORM_TO")
-	sender := getEnv("CONTACT_FORM_FROM")
+	pwd := "fiodqjxkjyvedtny"
+	recipient := "leadership@nestatandersonmill.com"
+	sender := "contact@nestatandersonmill.com"
 
 	auth := smtp.PlainAuth("", user, pwd, smtpServer)
 	to := []string{recipient}
@@ -40,15 +40,24 @@ func contact(_ http.ResponseWriter, request *http.Request) {
 	name := form.Get("name")
 	email := form.Get("email")
 	message := form.Get("message")
-	msg := fmt.Sprintf("From: %v %v\n"+
-		"Subject: New Nest Contact!"+
-		"%v", name, email, message)
+	msg := fmt.Sprintf(
+		"New Nest Contact!\n"+
+			"From: %v\n"+
+			"Email: %v\n"+
+			"Message: %v\n", name, email, message)
 	msgBytes := []byte(msg)
 	err = smtp.SendMail(smtpServer+":587", auth, from, to, msgBytes)
 	if err != nil {
 		log.Println(err)
 		return
 	}
+	_, err = w.Write([]byte(""))
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	w.WriteHeader(http.StatusOK)
+	return
 }
 
 func getEnv(k string) string {
