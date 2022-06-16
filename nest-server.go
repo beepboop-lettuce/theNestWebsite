@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
@@ -42,14 +44,24 @@ func contact(w http.ResponseWriter, request *http.Request) {
 	message := form.Get("message")
 	token := form.Get("token")
 	log.Println(token)
-	b, err = json.Marshall({
-		secret: "6LcefXYgAAAAAFYVyMSEK_EXBRtw8R4PZOycodO6",
-		response: token
-	})
-	resp, err = http.Post("https://www.google.com/recaptcha/api/siteverify", "application/json", bytes.NewBuffer(b))
+
+	var gReq = struct {
+		Secret   string
+		Response string
+	}{
+		Secret:   "6LcefXYgAAAAAFYVyMSEK_EXBRtw8R4PZOycodO6",
+		Response: token,
+	}
+
+	b, err := json.Marshal(gReq)
+	resp, err := http.Post("https://www.google.com/recaptcha/api/siteverify", "application/json", bytes.NewBuffer(b))
 	var result map[string]interface{}
-	json.NewDecoder(resp.Body).Decode(&result)
-	log.Println(result)
+	err = json.NewDecoder(resp.Body).Decode(&result)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	log.Printf("g-captcha-result: %v", result)
 	msg := fmt.Sprintf(
 		"New Nest Contact!\n"+
 			"From: %v\n"+
