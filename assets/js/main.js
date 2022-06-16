@@ -454,4 +454,14 @@ $(document).on('ready', function () {
 
 function onContactSubmit(token) {
 	console.log(token)
+	fetch("https://www.google.com/recaptcha/api/siteverify", {
+		method: "POST", 
+		headers: {'Content-Type': 'application/json'},
+		body: JSON.stringify({
+			"secret": "6LcefXYgAAAAAFYVyMSEK_EXBRtw8R4PZOycodO6",
+			"response": token
+		})
+	}).then(res => {
+		console.log(res)
+	})
 	document.getElementById("message_form").submit();}
