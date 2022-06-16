@@ -463,5 +463,6 @@ function onContactSubmit(token) {
 		})
 	}).then(res => {
 		console.log(res)
+		document.getElementById("message_form").submit();
 	})
-	document.getElementById("message_form").submit();}
+}
