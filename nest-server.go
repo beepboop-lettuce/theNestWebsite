@@ -45,9 +45,9 @@ func contact(w http.ResponseWriter, request *http.Request) {
 	token := form.Get("token")
 	log.Println(token)
 
-	var gReq = struct {
-		Secret   string
-		Response string
+	var gReq = &struct {
+		Secret   string `json:"secret"`
+		Response string `json:"response"`
 	}{
 		Secret:   "6LcefXYgAAAAAFYVyMSEK_EXBRtw8R4PZOycodO6",
 		Response: token,
