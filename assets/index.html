@@ -817,11 +817,12 @@
                     <p class="message-ok invisible form-text-feedback form-success-visible">Your message has been sent, thank you.</p>
                   </div>
                 </div>
-
                 <div class="btns text-right">
-                  <div class="g-recaptcha" data-sitekey="6Le2ZnYgAAAAAIqnmNr0USMIlnXIFGyT2XyUjJZT"></div>
-                  <button id="submit-message" class="btn btn-outline-white btn-round btn-fullNot email_b"
-                  name="submit_message">
+                  <button id="submit-message" class="btn btn-outline-white btn-round btn-fullNot email_b g-recaptcha"
+                  name="submit_message"
+                  data-sitekey="6LcefXYgAAAAAGXfZeAMp4WiNPBPtZWefZ_xcuOC" 
+                  data-callback='onContactSubmit' 
+                  data-action='submit'>
                     <span class="txt">Send Now</span>
                     <span class="arrow-icon"></span>
                   </button>

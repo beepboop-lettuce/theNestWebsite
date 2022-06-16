@@ -452,3 +452,6 @@ $(document).on('ready', function () {
 
 });
 
+function onContactSubmit(token) {
+	console.log(token)
+	document.getElementById("message_form").submit();}
