@@ -40,6 +40,8 @@ func contact(w http.ResponseWriter, request *http.Request) {
 	name := form.Get("name")
 	email := form.Get("email")
 	message := form.Get("message")
+	token := form.Get("token")
+	log.Println(token)
 	msg := fmt.Sprintf(
 		"New Nest Contact!\n"+
 			"From: %v\n"+
