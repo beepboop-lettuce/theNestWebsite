@@ -2442,9 +2442,9 @@ textarea {
     @media (min-width: 400px) {
       .page-header-alpha .navbar-brand {
         position: absolute;
-        left: 120px;
-        top: 32px;
-        z-index: 20; } }
+        left: 80px;
+        top: 2em;
+        /* z-index: 20;*/ } } 
     .page-header-alpha .navbar-brand .logo img {
       height: 80px;
       width: auto; }
@@ -2830,7 +2830,7 @@ textarea {
         .menu-icon .bars .bar1,
         .menu-icon .bars .bar2,
         .menu-icon .bars .bar3 {
-          background: #98A09E; } }
+          background: black; } }
   .menu-icon.menu-icon-thick .bars .bar1,
   .menu-icon.menu-icon-thick .bars .bar2,
   .menu-icon.menu-icon-thick .bars .bar3 {
