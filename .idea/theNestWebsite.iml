@@ -6,5 +6,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@popperjs" level="application" />
+    <orderEntry type="library" name="api" level="application" />
+    <orderEntry type="library" name="@popperjs" level="application" />
   </component>
 </module>
