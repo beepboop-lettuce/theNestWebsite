@@ -2442,9 +2442,9 @@ textarea {
     @media (min-width: 400px) {
       .page-header-alpha .navbar-brand {
         position: absolute;
-        left: 120px;
-        top: 32px;
-        z-index: 20; } }
+        left: 80px;
+        top: 2em;
+        /* z-index: 20;*/ } } 
     .page-header-alpha .navbar-brand .logo img {
       height: 80px;
       width: auto; }
@@ -2465,7 +2465,6 @@ textarea {
           font-size: 1.75rem;
           opacity: 1; }
   .page-header-alpha .all-menu-wrapper {
-    justify-content: flex-end;
     position: fixed;
     z-index: 5;
     background: #98A09E;
@@ -2830,7 +2829,7 @@ textarea {
         .menu-icon .bars .bar1,
         .menu-icon .bars .bar2,
         .menu-icon .bars .bar3 {
-          background: #98A09E; } }
+          background: black; } }
   .menu-icon.menu-icon-thick .bars .bar1,
   .menu-icon.menu-icon-thick .bars .bar2,
   .menu-icon.menu-icon-thick .bars .bar3 {
@@ -3536,20 +3535,25 @@ textarea {
       padding-right: 0; }
       @media (min-width: 1600px) {
         .section .section-wrapper.fullwidth {
-          max-width: none; } }
+          max-width: none;
+        }
+      }
       .section .section-wrapper.fullwidth.with-margin {
         padding-left: 16px;
-        padding-right: 16px; }
+        padding-right: 16px;
+      }
         @media (min-width: 768px) {
           .section .section-wrapper.fullwidth.with-margin {
             padding-left: 64px;
-            padding-right: 64px; } }
+            padding-right: 64px;
+          }
+        }
         @media (min-width: 960px) {
           .section .section-wrapper.fullwidth.with-margin {
             padding-left: 64px;
             padding-right: 64px;
-            padding-top: 144px;
-            padding-bottom: 144px; } }
+          }
+        }
 
 .section .align-items-bottom {
   display: flex;
@@ -4067,7 +4071,7 @@ textarea {
     bottom: 80px;
     padding-right: 64px;
     right: 0;
-    width: 50%;
+    /*width: 50%;*/
     width: 50vw;
     display: flex;
     align-items: flex-end;

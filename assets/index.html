@@ -79,78 +79,80 @@
     </div>
 </div>
 
-<!-- BEGIN OF site header Menu -->
-<header class="page-header navbar page-header-alpha scrolled-white menu-right topmenu-right">
+<nav class="navbar navbar-expand navbar-light bg-light" style="z-index: 99">
+    <div class="container-fluid">
+        <!-- Begin of logo/brand -->
+        <a class="navbar-brand" href="#home">
+            <img class="light-logo" src="/assets/img/logo.png" alt="Logo" width="100" height="100">
+        </a>
+        <!-- End of logo/brand -->
+        <!-- BEGIN OF site header Menu -->
+        <header class="page-header page-header-alpha scrolled-white menu-right topmenu-right sticky-top">
+            <!-- Begin of menu icon toggler -->
+            <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
+                <!-- Available class : menu-icon-dot / menu-icon-thick /menu-icon-random -->
+                <span class="menu-icon menu-icon-normal">
+                    <span class="bars">
+                        <span class="bar1"></span>
+                        <span class="bar2"></span>
+                        <span class="bar3"></span>
+                    </span>
+                </span>
+            </button>
+            <!-- End of menu icon toggler -->
 
-    <!-- Begin of menu icon toggler -->
-    <button class="navbar-toggler site-menu-icon" id="navMenuIcon">
-        <!-- Available class : menu-icon-dot / menu-icon-thick /menu-icon-random -->
-        <span class="menu-icon menu-icon-normal">
-        <span class="bars">
-          <span style="color: #010101" class="bar1"></span>
-          <span class="bar2"></span>
-          <span class="bar3"></span>
-        </span>
-      </span>
-    </button>
-    <!-- End of menu icon toggler -->
+            <!-- begin of menu wrapper -->
+            <div class="all-menu-wrapper" id="navbarMenu">
+                <!-- Begin of top menu -->
+                <div class="navbar-topmenu">
+                    <!-- Begin of CTA Actions, & Icons menu -->
+                    <ul class="navbar-nav navbar-nav-actions">
+                        <li class="nav-item">
+                            <a class="btn btn-outline-white btn-round" target="_blank"
+                               href="https://www.myprocare.com/Default/Index?aWtuPTQ1OTQ4Mzc3OTMmc2NoSWQ9Mg==">
+                                Register
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Action button -->
+                            <div class="btns-action anim-3 text-right">
+                                <a class="btn btn-outline-white btn-round" href="#contact">
+                                    Contact
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- End of CTA & Icons menu -->
+                </div>
+                <!-- End of top menu -->
 
-    <!-- Begin of logo/brand -->
-    <a class="navbar-brand" href="#home">
-      <span class="logo">
-        <img class="light-logo" src="/assets/img/logo.png" alt="Logo">
-      </span>
-        <span class="text">
-        <span class="line"></span>
-        <span class="line sub"></span>
-      </span>
-    </a>
-    <!-- End of logo/brand -->
+                <!-- Begin of hamburger mainmenu menu -->
+                <div class="navbar-mainmenu">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                               <a class="nav-link" href="./gallery.html">Gallery</a>
+                             </li>
+                        -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Programs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="https://www.myprocare.com/Default/Index?aWtuPTQ1OTQ4Mzc3OTMmc2NoSWQ9Mg==">Pre-Register</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End of hamburger mainmenu menu -->
 
-    <!-- begin of menu wrapper -->
-    <div class="all-menu-wrapper" id="navbarMenu">
-        <!-- Begin of top menu -->
-        <nav class="navbar-topmenu">
-            <!-- Begin of CTA Actions, & Icons menu -->
-            <!-- <ul class="navbar-nav navbar-nav-actions">
-                    <li class="nav-item">
-                        <a class="btn btn-outline-white btn-round" target="_blank" href="https://themeforest.net/user/mivfx/portfolio">
-                            Buy Now
-                        </a>
-                    </li>
-                </ul> -->
-            <!-- End of CTA & Icons menu -->
-        </nav>
-        <!-- End of top menu -->
-
-        <!-- Begin of hamburger mainmenu menu -->
-        <nav class="navbar-mainmenu">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <!-- <li class="nav-item">
-                       <a class="nav-link" href="./gallery.html">Gallery</a>
-                     </li>
-                -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Programs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="https://www.myprocare.com/Default/Index?aWtuPTQ1OTQ4Mzc3OTMmc2NoSWQ9Mg==">Pre-Register</a>
-                </li>
-            </ul>
-        </nav>
-        <!-- End of hamburger mainmenu menu -->
-
+            </div>
+            </header>
     </div>
-    <!-- end of menu wrapper -->
-
-</header>
-<!-- END OF site header Menu-->
+</nav>
 
 <!-- BEGIN OF page cover -->
 <div class="page-cover">
@@ -226,19 +228,6 @@
 
                 </div>
             </div>
-
-            <div class="section-aside aside-bottom">
-                <div class="text-right">
-
-                </div>
-                <!-- Action button -->
-                <div class="btns-action anim-3 text-right">
-                    <a class="btn btn-outline-white btn-round" href="#contact">
-                        Contact
-                    </a>
-                </div>
-            </div>
-
 
             <!-- Arrows scroll down/up -->
             <footer class="section-footer scrolldown">
