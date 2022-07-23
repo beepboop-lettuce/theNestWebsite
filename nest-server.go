@@ -116,7 +116,7 @@ func redirectToTLS(w http.ResponseWriter, r *http.Request) {
 	host := r.Host
 	s := strings.Split(host, ":")
 	log.Printf("redirect host: %v", s[0])
-	http.Redirect(w, r, "https://"+s[0]+":"+getEnv("NEST_TLS_PORT")+r.RequestURI, http.StatusMovedPermanently)
+	http.Redirect(w, r, "https://"+s[0]+r.RequestURI, http.StatusMovedPermanently)
 }
 
 func main() {
