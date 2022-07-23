@@ -3603,7 +3603,7 @@ textarea {
     .fp-scrollable .section-wrapper.with-margin {
       padding-left: 0rem;
       padding-right: 0rem;
-      padding-top: 144px;
+      /*padding-top: 144px;*/
       padding-bottom: 96px; } }
 
 @media (max-width: 760px) {
