@@ -2771,9 +2771,9 @@ textarea {
   transition: 0.3s;
   display: inline-block;
   position: relative;
-  background: #98A09E;
+  /*background: #98A09E;*/
   border-radius: 2px;
-  opacity: 1; }
+  opacity: 0; }
   .menu-icon.menu-bg {
     background: #3f4b62; }
   @media (min-width: 768px) {
@@ -4100,7 +4100,6 @@ textarea {
       padding-right: 64px;
       right: 0;
       width: 50%;
-      width: 50vw;
       display: flex;
       align-items: flex-end;
       justify-content: flex-end;
@@ -5254,6 +5253,11 @@ p {
 
 .text-black {
   color: #010101 !important; }
+
+/* CUSTOM CSS */
+#submit-message {
+  float: left;
+}
 
 /* Add your responsiveness hook here  */
 /* ipad and tablet */
