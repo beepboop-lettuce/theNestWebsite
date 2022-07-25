@@ -4096,7 +4096,7 @@ textarea {
   @media (min-width: 960px) {
     .section .section-aside.small-relative, .section .section-aside.small-relative.aside-bottom {
       position: absolute;
-      bottom: 80px;
+      bottom: 200px;
       padding-right: 64px;
       right: 0;
       width: 50%;
