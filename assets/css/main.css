@@ -2771,7 +2771,7 @@ textarea {
   transition: 0.3s;
   display: inline-block;
   position: relative;
-  /*background: #98A09E;*/
+  background: #98A09E;
   border-radius: 2px;
   opacity: 0; }
   .menu-icon.menu-bg {
@@ -2824,7 +2824,7 @@ textarea {
       width: 100%;
       margin-bottom: 4px;
       transition: 0.3s;
-      color: #010101; }
+      background-color: #010101; }
       @media (min-width: 768px) {
         .menu-icon .bars .bar1,
         .menu-icon .bars .bar2,
