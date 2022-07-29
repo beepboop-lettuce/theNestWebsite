@@ -1208,7 +1208,7 @@ textarea {
   margin-top: 2rem; }
   .article .article-content .wrapper {
     width: 100%;
-    max-width: 720px;
+    
     margin-left: auto;
     margin-right: auto; }
 
@@ -1230,6 +1230,12 @@ textarea {
 .article .media img {
   width: 4.5rem;
   height: auto; }
+
+.line {
+  border-bottom: 2px solid lightgray;
+  display: block;
+  padding-top: 5%;
+}
 
 .media-article-title .media-body {
   overflow: hidden; }
@@ -1286,8 +1292,8 @@ textarea {
 
 @media (min-width: 768px) {
   .article-light {
-    padding-left: 64px;
-    padding-right: 64px; } }
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 @media (min-width: 1200px) {
   .article-light {
@@ -3567,7 +3573,7 @@ textarea {
 
 @media (min-width: 960px) {
   .section-item {
-    padding-top: 64px;
+    
     padding-bottom: 64px; } }
 
 .section-item-slider {
