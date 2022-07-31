@@ -11,17 +11,13 @@ import (
 	"strings"
 )
 
-func baseHandler(w http.ResponseWriter, r *http.Request, file string) {
+func handler(w http.ResponseWriter, r *http.Request) {
+	file := r.URL.Path
+	if file == "/" {
+		file = "index"
+	}
 	url := "./assets/" + file + ".html"
 	http.ServeFile(w, r, url)
-}
-
-func indexHandler(w http.ResponseWriter, r *http.Request) {
-	baseHandler(w, r, "/index")
-}
-
-func biographiesHandler(w http.ResponseWriter, r *http.Request) {
-	baseHandler(w, r, "/biographies")
 }
 
 func contact(w http.ResponseWriter, request *http.Request) {
@@ -97,9 +93,8 @@ func register() *http.ServeMux {
 	mux := http.NewServeMux()
 	staticHandler := http.FileServer(http.Dir("./assets"))
 	mux.Handle("/assets/", http.StripPrefix("/assets", staticHandler))
-	mux.HandleFunc("/biographies", biographiesHandler)
 	mux.HandleFunc("/contact", contact)
-	mux.HandleFunc("/", indexHandler)
+	mux.HandleFunc("/", handler)
 
 	return mux
 }
