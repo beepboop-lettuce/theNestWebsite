@@ -114,8 +114,8 @@ func listen(mux *http.ServeMux) {
 	log.Fatal(http.ListenAndServe(":"+port, http.HandlerFunc(redirectToTLS)))
 }
 func redirectToTLS(w http.ResponseWriter, r *http.Request) {
-	host := r.Host
-	s := strings.Split(host, ":")
+	hostname := r.URL.Hostname()
+	s := strings.Split(hostname, ":")
 	log.Printf("redirect host: %v", s[0])
 	http.Redirect(w, r, "https://"+s[0]+r.RequestURI, http.StatusMovedPermanently)
 }
