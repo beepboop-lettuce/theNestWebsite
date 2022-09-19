@@ -1729,7 +1729,7 @@ textarea {
     right: 8px;
     z-index: 0; }
   .media-project .media-img img {
-    width: 100%;
+    
     height: auto; }
   .media-project .media-img:before {
     position: absolute;
