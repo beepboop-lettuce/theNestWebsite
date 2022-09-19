@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Aug 23 14:23:48 2022
+# Make data base, printed on Mon Sep 19 09:20:15 2022
 
 # Variables
 
@@ -43,13 +45,13 @@ CURDIR := /home/erica/Repositories/theNestWebsite
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/104
+SNAP_DATA = /var/snap/code/106
 # environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:49546
+JOURNAL_STREAM = 8:52352
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -69,13 +71,13 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-MANAGERPID = 1686
+MANAGERPID = 1671
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/erica/Repositories/theNestWebsite
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/104/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/106/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -83,25 +85,23 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/asus-laptop:@/tmp/.ICE-unix/1902,unix/asus-laptop:/tmp/.ICE-unix/1902
+SESSION_MANAGER = local/asus-laptop:@/tmp/.ICE-unix/1893,unix/asus-laptop:/tmp/.ICE-unix/1893
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/erica/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/104
+SNAP = /snap/code/106
 # environment
-SNAP_VERSION = 6d9b74a7
+SNAP_VERSION = 784b0177
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
-DISABLE_WAYLAND = 1
-# environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 711022a87c1f42dc879ef77045c31b5b
+INVOCATION_ID = 708901dbcf0642e7addda62a6ad03b22
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/104/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/106/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -121,7 +121,7 @@ PWD = /home/erica/Repositories/theNestWebsite
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1864
+SSH_AGENT_PID = 1855
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -135,11 +135,11 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/erica/.config/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = /home/erica/.config/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
 # environment
 LOGNAME = erica
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # environment
@@ -167,7 +167,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/erica/snap/code/104
+SNAP_USER_DATA = /home/erica/snap/code/106
 # environment
 SHLVL = 1
 # environment
@@ -177,7 +177,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = erica
 # environment
-SNAP_REVISION = 104
+SNAP_REVISION = 106
 # makefile
 .DEFAULT_GOAL := build
 # environment
@@ -195,7 +195,7 @@ OLDPWD = /home/erica/Repositories
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-7c9009d6-1.70.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-7c9009d6-1.71.0-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -225,11 +225,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0c25ed49_b0b7_445b_afb7_3a55a620520d
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/3ae615be_708b_42ef_99c9_328c3dcc1bcd
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.83
+GNOME_TERMINAL_SERVICE = :1.88
 # default
 SUFFIXES := 
 # environment
@@ -249,9 +249,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 3874
+VSCODE_PID = 4066
 # variable set hash-table stats:
-# Load=120/1024=12%, Rehash=0, Collisions=15/145=10%
+# Load=119/1024=12%, Rehash=0, Collisions=15/144=10%
 
 # Pattern-specific Variable Values
 
@@ -259,9 +259,9 @@ VSCODE_PID = 3874
 
 # Directories
 
-# . (device 2050, inode 1442043): 18 files, no impossibilities.
+# . (device 2050, inode 1442043): 20 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -285,8 +285,6 @@ all:
 Makefile:
 #  Implicit rule search has been done.
  
-make: *** No rule to make target 'all'.  Stop.
-
 #  Last modified 2022-06-04 22:02:24.739412958
 #  File has been updated.
 #  Successfully updated.
@@ -329,12 +327,12 @@ dev-gin: build
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 27 / storage = 233 B / avg = 8 B
-# current buf: size = 8162 B / used = 233 B / count = 27 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 249 B / avg = 8 B
+# current buf: size = 8162 B / used = 249 B / count = 29 / avg = 8 B
 
-# strcache performance: lookups = 44 / hit rate = 38%
+# strcache performance: lookups = 46 / hit rate = 36%
 # hash-table stats:
-# Load=27/8192=0%, Rehash=0, Collisions=1/44=2%
-# Finished Make data base on Tue Aug 23 14:23:48 2022
+# Load=29/8192=0%, Rehash=0, Collisions=1/46=2%
+# Finished Make data base on Mon Sep 19 09:20:15 2022
 
  
