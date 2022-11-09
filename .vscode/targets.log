@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Oct  9 12:33:48 2022
+# Make data base, printed on Wed Nov  9 12:05:55 2022
 
 # Variables
 
@@ -45,13 +43,13 @@ CURDIR := /home/erica/Repositories/theNestWebsite
 # makefile
 SHELL = /bin/sh
 # environment
-SNAP_DATA = /var/snap/code/109
+SNAP_DATA = /var/snap/code/112
 # environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:40934
+JOURNAL_STREAM = 8:41803
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
@@ -71,13 +69,13 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
-MANAGERPID = 1586
+MANAGERPID = 1624
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/erica/Repositories/theNestWebsite
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/109/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/112/usr/share/glib-2.0/schemas
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -85,23 +83,23 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/asus-laptop:@/tmp/.ICE-unix/1803,unix/asus-laptop:/tmp/.ICE-unix/1803
+SESSION_MANAGER = local/asus-laptop:@/tmp/.ICE-unix/1840,unix/asus-laptop:/tmp/.ICE-unix/1840
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/erica/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-SNAP = /snap/code/109
+SNAP = /snap/code/112
 # environment
-SNAP_VERSION = 64bbfbf6
+SNAP_VERSION = 8fa188b2
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 9f5d0dd8f5fe43579fbe9b1e23cd73c5
+INVOCATION_ID = cd9eac8beb874384b87473188e7727c0
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/109/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/112/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -121,7 +119,7 @@ PWD = /home/erica/Repositories/theNestWebsite
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1759
+SSH_AGENT_PID = 1802
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -135,7 +133,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/erica/.config/Code/CachedData/64bbfbf67ada9953918d72e1df2f4d8e537d340e
+VSCODE_CODE_CACHE_PATH = /home/erica/.config/Code/CachedData/8fa188b2b301d36553cbc9ce1b0a146ccb93351f
 # environment
 LOGNAME = erica
 # environment
@@ -167,7 +165,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # environment
-SNAP_USER_DATA = /home/erica/snap/code/109
+SNAP_USER_DATA = /home/erica/snap/code/112
 # environment
 SHLVL = 1
 # environment
@@ -177,7 +175,7 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = erica
 # environment
-SNAP_REVISION = 109
+SNAP_REVISION = 112
 # makefile
 .DEFAULT_GOAL := build
 # environment
@@ -195,7 +193,7 @@ OLDPWD = /home/erica/Repositories
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-7c9009d6-1.72.0-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-7c9009d6-1.73.0-main.sock
 # makefile
 MAKEFLAGS = pqrR
 # environment
@@ -225,11 +223,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/394a825e_09c9_48bd_9606_fc95abb3c0b1
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/a194aeed_a0f4_4b34_9ca0_93fdab5fa38d
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.84
+GNOME_TERMINAL_SERVICE = :1.123
 # default
 SUFFIXES := 
 # environment
@@ -249,7 +247,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 4169
+VSCODE_PID = 8889
 # variable set hash-table stats:
 # Load=119/1024=12%, Rehash=0, Collisions=15/144=10%
 
@@ -285,6 +283,8 @@ all:
 Makefile:
 #  Implicit rule search has been done.
  
+make: *** No rule to make target 'all'.  Stop.
+
 #  Last modified 2022-06-04 22:02:24.739412958
 #  File has been updated.
 #  Successfully updated.
@@ -333,6 +333,6 @@ dev-gin: build
 # strcache performance: lookups = 46 / hit rate = 36%
 # hash-table stats:
 # Load=29/8192=0%, Rehash=0, Collisions=1/46=2%
-# Finished Make data base on Sun Oct  9 12:33:48 2022
+# Finished Make data base on Wed Nov  9 12:05:55 2022
 
  
