@@ -105,7 +105,7 @@ func listen(mux *http.ServeMux) {
 	port := getEnv("NEST_PORT")
 	go func() {
 		log.Printf("listening on :%v", tlsPort)
-		err := http.ListenAndServeTLS(":"+tlsPort, "./server.crt", "./server.key", mux)
+		err := http.ListenAndServeTLS(":"+tlsPort, "./certificate.crt", "./private.key", mux)
 		if err != nil {
 			log.Println(err)
 		}
